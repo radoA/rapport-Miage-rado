@@ -1,0 +1,53 @@
+\babel@toc {french}{}
+\contentsline {section}{REMERCIEMENTS}{2}{section*.1}
+\contentsline {section}{FICHE BILAN ET SYNTHESE}{5}{section*.3}
+\contentsline {section}{INTRODUCTION}{6}{section*.4}
+\contentsline {section}{\numberline {1}Pr\'esentation de l'entreprise d'accueil}{7}{section.1}
+\contentsline {section}{\numberline {2}Presentation du sujet de stage}{10}{section.2}
+\contentsline {subsection}{\numberline {2.1}Planification}{10}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Quelques \'elements de conception}{12}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Diagramme de cas d'utilisation}{12}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Diagramme de s\'equence}{13}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Sp\'ecification et analyse des exigences}{14}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Exigences fonctionnelles}{14}{subsubsection.2.3.1}
+\contentsline {paragraph}{Exigence 1 : L'inscription de nouveaux clients\\}{14}{section*.5}
+\contentsline {paragraph}{Exigence 2 : Connexion d'un utilisateur de l'entreprise\\}{14}{section*.6}
+\contentsline {paragraph}{Exigence 3 : Section acceuil\\}{14}{section*.7}
+\contentsline {paragraph}{Exigence 4 : Section suivre votre colis\\}{14}{section*.8}
+\contentsline {paragraph}{Exigence 5 : Acc\'eder \`a la liste des clients\\}{15}{section*.9}
+\contentsline {paragraph}{Exigence 6 : Acc\'eder \`a la liste des partenariats\\}{15}{section*.10}
+\contentsline {subsubsection}{\numberline {2.3.2}Exigences non fonctionnelles}{15}{subsubsection.2.3.2}
+\contentsline {paragraph}{Exigence 7: Le site doit \^etre responsive\\}{15}{section*.11}
+\contentsline {paragraph}{Exigence 8: Utilisation du mod\`ele MVC\\}{16}{section*.12}
+\contentsline {subsection}{\numberline {2.4}Maquettage}{17}{subsection.2.4}
+\contentsline {section}{\numberline {3}D\'eroulement des travaux de stage}{18}{section.3}
+\contentsline {subsection}{\numberline {3.1}Apprentissage des outils}{18}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Pr\'eparation de l'environnement de d\'eveloppement}{18}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Installation d'un serveur web, php, MySQL}{18}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Installation de composer}{18}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Configuration de apache}{19}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Installation de docker}{19}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Installation de nodejs}{19}{subsubsection.3.2.5}
+\contentsline {subsection}{\numberline {3.3}API REST}{20}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}D\'eveloppement du site}{21}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Le Back-end}{21}{subsubsection.3.4.1}
+\contentsline {paragraph}{Le mod\`ele:\\}{21}{section*.13}
+\contentsline {paragraph}{Le contr\^oleur:\\}{22}{section*.14}
+\contentsline {subsubsection}{\numberline {3.4.2}Le front-end}{23}{subsubsection.3.4.2}
+\contentsline {paragraph}{Connexion et inscription d'un utilisateur: bootstrap Modal et Forms\\}{23}{section*.15}
+\contentsline {paragraph}{Affichage du diagramme circulaire: CanvasJs Pie Chart\\}{23}{section*.16}
+\contentsline {paragraph}{Affichage de l'\'etat d'avancement de t\^ache: Bootstrap Progress Bar\\}{23}{section*.17}
+\contentsline {paragraph}{Cr\'eation d'un trombinoscope pour afficher les membres et les partenaires : Bootstrap Gird system\\}{23}{section*.18}
+\contentsline {section}{CONCLUSION}{25}{section*.19}
+\contentsline {section}{\numberline {A}Abbreviations}{i}{appendix.A}
+\contentsline {section}{\numberline {B}Quelques capture d'\'ecran de l'application}{ii}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Formulaire d'enregistrement d'un utilisateur}{ii}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}Menu acceuil vu par un utilisateur non connect\'e}{iii}{subsection.B.2}
+\contentsline {subsection}{\numberline {B.3}Menu acceuil vu par un utilisateur connect\'e}{iv}{subsection.B.3}
+\contentsline {subsection}{\numberline {B.4}Menu projet vu par un membre connect\'e}{v}{subsection.B.4}
+\contentsline {subsection}{\numberline {B.5}Menu membre vu par un administrateur}{vi}{subsection.B.5}
+\contentsline {subsection}{\numberline {B.6}Menu membre vu par un membre connect\'e}{vii}{subsection.B.6}
+\contentsline {section}{\numberline {C}Extrait de code}{viii}{appendix.C}
+\contentsline {subsection}{\numberline {C.1}Cr\'eation d'un alias vers le r\'epertoire racine du projet}{viii}{subsection.C.1}
+\contentsline {subsection}{\numberline {C.2}Activation du module de r\'eecriture d'Apache}{viii}{subsection.C.2}
+\contentsline {subsection}{\numberline {C.3}R\'eecriture d'URL}{viii}{subsection.C.3}

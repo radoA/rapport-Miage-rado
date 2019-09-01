@@ -1,0 +1,38 @@
+\BOOKMARK [1][-]{section*.1}{REMERCIEMENTS}{}% 1
+\BOOKMARK [1][-]{section*.3}{FICHE BILAN ET SYNTHESE}{}% 2
+\BOOKMARK [1][-]{section*.4}{INTRODUCTION}{}% 3
+\BOOKMARK [1][-]{section.1}{Pr\351sentation de l'entreprise d'accueil}{}% 4
+\BOOKMARK [1][-]{section.2}{Presentation du sujet de stage}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Planification}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Quelques \351lements de conception}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Diagramme de cas d'utilisation}{subsection.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Diagramme de s\351quence}{subsection.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Sp\351cification et analyse des exigences}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Exigences fonctionnelles}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Exigences non fonctionnelles}{subsection.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.4}{Maquettage}{section.2}% 13
+\BOOKMARK [1][-]{section.3}{D\351roulement des travaux de stage}{}% 14
+\BOOKMARK [2][-]{subsection.3.1}{Apprentissage des outils}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Pr\351paration de l'environnement de d\351veloppement}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Installation d'un serveur web, php, MySQL}{subsection.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Installation de composer}{subsection.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Configuration de apache}{subsection.3.2}% 19
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Installation de docker}{subsection.3.2}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Installation de nodejs}{subsection.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.3}{API REST}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.4}{D\351veloppement du site}{section.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Le Back-end}{subsection.3.4}% 24
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Le front-end}{subsection.3.4}% 25
+\BOOKMARK [1][-]{section*.19}{CONCLUSION}{}% 26
+\BOOKMARK [1][-]{appendix.A}{Abbreviations}{}% 27
+\BOOKMARK [1][-]{appendix.B}{Quelques capture d'\351cran de l'application}{}% 28
+\BOOKMARK [2][-]{subsection.B.1}{Formulaire d'enregistrement d'un utilisateur}{appendix.B}% 29
+\BOOKMARK [2][-]{subsection.B.2}{Menu acceuil vu par un utilisateur non connect\351}{appendix.B}% 30
+\BOOKMARK [2][-]{subsection.B.3}{Menu acceuil vu par un utilisateur connect\351}{appendix.B}% 31
+\BOOKMARK [2][-]{subsection.B.4}{Menu projet vu par un membre connect\351}{appendix.B}% 32
+\BOOKMARK [2][-]{subsection.B.5}{Menu membre vu par un administrateur}{appendix.B}% 33
+\BOOKMARK [2][-]{subsection.B.6}{Menu membre vu par un membre connect\351}{appendix.B}% 34
+\BOOKMARK [1][-]{appendix.C}{Extrait de code}{}% 35
+\BOOKMARK [2][-]{subsection.C.1}{Cr\351ation d'un alias vers le r\351pertoire racine du projet}{appendix.C}% 36
+\BOOKMARK [2][-]{subsection.C.2}{Activation du module de r\351ecriture d'Apache}{appendix.C}% 37
+\BOOKMARK [2][-]{subsection.C.3}{R\351ecriture d'URL}{appendix.C}% 38

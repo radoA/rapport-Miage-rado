@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%MMMMMMMMMMMMMMMM%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fichier de bibliographie relatif à la trame du rapport de stage de L3 
+%% informatique de l'université d'\'Evry.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@Article{citation1,
+  author = 	 {Bernard Dupont},
+  title = 	 {{L'art simplifié de faire un rapport de stage}},
+  journal = 	 {Jeunesse talentueuse},
+  year = 	 {2007},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTpages = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@Misc{citation2,
+  OPTkey = 	 {},
+  author = 	 {Claire Martin},
+  title = 	 {{Faites attention à ne pas suivre les propos de Bernard Dupont
+                  à la lettre}},
+  OPThowpublished = {},
+  OPTmonth = 	 {},
+  year = 	 {2009},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@Book{Goossens1994,
+  author = 	 {Michel Goosens and Franck Mittelbach and Alexander Samarin},
+  ALTeditor = 	 {},
+  title = 	 {{The \LaTeX Companion}},
+  publisher = 	 {Addison-Wesley},
+  year = 	 {1994},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTaddress = 	 {},
+  OPTedition = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+ 
+
+@Misc{pencil,
+  author =       {},
+  title =        {Installation de pencil},
+  howpublished = {\url{https://pencil.evolus.vn/Downloads.html}},
+  year =         {},
+}
+ 
+@Misc{gabarit,
+  author =       {},
+  title =        {Templates existant},
+  howpublished = {\url{http://www.tooplate.com/templates/2079\_garage/}},
+  year =         {},
+}
+ 
+ 
+@Misc{selecteurs,
+  author =       {},
+  title =        {Selectors Reference},
+  howpublished = {\url{https://www.w3schools.com/cssref/css\_selectors.asp}},
+  year =         {},
+}
+ 
+ 
+@Misc{apache,
+  author =       {},
+  title =        {Installation du serveur Apache  },
+  howpublished = {\url{http://debian-facile.org/doc:reseau:apache2:multisite}},
+  year =         {},
+}
+
+@Misc{bootstap,
+  author =       {},
+  title =        {Prise en main de bootstrap},
+  howpublished = {\url{http://getbootstrap.com/getting-started/}},
+  year =         {},
+}
+
+@Misc{progressbars,
+  author =       {w3schools},
+  title =        {BS Progress Bars},
+  howpublished = {\url{https://www.w3schools.com/bootstrap/bootstrap\_progressbars.asp}},
+  year =         {},
+}
+
+@Misc{gird_system,
+  author =       {w3schools},
+  title =        {BS Gird System},
+  howpublished = {\url{https://www.w3schools.com/bootstrap/bootstrap\_grid\_system.asp}},
+  year =         {},
+}
+
+@Misc{forms,
+  author =       {w3schools},
+  title =        {BS Forms},
+  howpublished = {\url{https://www.w3schools.com/bootstrap/bootstrap\_forms.asp}},
+  year =         {},
+}
+
+@Misc{modal,
+  author =       {w3schools},
+  title =        {BS Modal},
+  howpublished = {\url{https://www.w3schools.com/bootstrap/bootstrap\_modal.asp}},
+  year =         {},
+}
+
+@Misc{charts,
+  author =       {},
+  title =        {Pie Charts},
+  howpublished = {\url{https://canvasjs.com/html5-javascript-pie-chart/}},
+  year =         {},
+}
+
+@Misc{mvc,
+  author =       {Codecourse},
+  title =        {Build a PHP MVC Application},
+  howpublished = {\url{https://www.codecourse.com/lessons/build-a-php-mvc-application/271}},
+  year =         {},
+}
+
+@Misc{sessions,
+  author =       {},
+  title =        {Sessions en php},
+  howpublished = {\url{http://php.net/manual/fr/session.idpassing.php}},
+  year =         {},
+}
+
+@Misc{phpfiles,
+  author =       {},
+  title =        {Système de fichiers en php},
+  howpublished = {\url{http://php.net/manual/fr/ref.filesystem.php}},
+  year =         {},
+}
+
+@Misc{phpPDO,
+  author =       {},
+  title =        {PHP Data Object},
+  howpublished = {\url{https://www.w3schools.com/php/php\_mysql\_create.asp}},
+  year =         {},
+}

@@ -1,0 +1,780 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TEMPLATE POUR L'ÉDITION SOUS \LaTeX{} D'UN RAPPORT DE STAGE DE 3e ANNÉE DE
+%% LICENCE INFORMATIQUE 
+%%
+%% Ce template est mis à la disposition des étudiants pour faciliter l'écriture
+%% de leur rapport. Ces derniers peuvent l'éditer à leur convenance (excepté 
+%% les parties du préambule indiquées comme étant NON MODIFIABLES servant au 
+%% choix du style de mise en page). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{article} % (NON MODIFIABLE)
+%% Packages utilisés 
+% (MODIFIABLE : des packages peuvent être ajoutés)
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[svgnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm,amscd}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{color}
+
+%% Mise en page (marges)
+% (NON MODIFIABLE)
+\geometry{hmargin=15mm,vmargin=20mm}
+
+%% Environnement de "théorèmes"
+% (MODIFIABLE)
+\newtheorem{defin}{Définition}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Théorème}
+\newtheorem{cor}{Corollaire}
+\newtheorem{lem}{Lemme}
+\newtheorem{nota}{Notation}
+\newtheorem{rem}{Remarque}
+\newtheorem{conj}{Conjecture}
+\newtheorem{nb}{N.B.}
+
+%% Taille relative tolérée d'un objet flottant sur une page
+% (MODIFIABLE)
+\renewcommand{\floatpagefraction}{0.95}
+
+%% utile pour inclure du code
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  frame=tb,
+  language=java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DÉBUT DU DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.9}
+\begin{document}
+
+%% Changement de nom pour la bibliographie
+\renewcommand{\refname}{Bibliographie}
+%% Style de bibliographie alpha
+\bibliographystyle{unsrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Première de couverture %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+\begin{center}
+  {\LARGE UNIVERSITÉ D'ÉVRY -- VAL D'ESSONNE}
+  \vskip 3mm
+  {\LARGE Département d'informatique}\\
+  \vskip 3mm
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics[scale=0.35]{logoUEVE.png}
+    \end{center}
+  \end{figure}
+  \vskip 1.6cm
+  {\LARGE RAPPORT DE STAGE}\\
+  \vskip 3mm
+  de $3^e$ année de la licence d'informatique\\
+  %% Faites un choix en fonction du parcours dans lequel vous êtes inscrit
+  parcours MIAGE\\  
+  soutenu par\\
+  %% Indiquez votre prénom et votre nom en lieu et place de "Prénom Nom"
+  \vskip 3mm {\LARGE {\bf Rado Aurélien ANDRIAMAHAKAJY}} 
+  %% Remplacez JJ et AAAA par le jour et l'année de votre soutenance
+  \vskip 3mm le 29 août 2017 
+  %% Indiquez le titre de votre stage
+  \vfill {\LARGE {\bf ETUDE ET MISE EN PLACE D'UNE APPLICATION WEB D'ENTREPRISE}} \vfill %APPLICATION WEB INTEGRANT UN 
+  \emph{Directeur de stage}\\
+  %% Indiquez le prénom et le nom de votre maître de stage en lieu et place
+  %% de "Prénom Nom"
+  SIMBA Khaled\\
+  \emph{\'Etablissement d'accueil}\\
+  %% Indiquez le nom de l'établissement qui vous a accueilli
+   %ARME
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics[scale=0.85]{logo.png}
+    \end{center}
+  \end{figure}
+  %% Indiquez l'année universitaire
+  \vskip 2cm Année universitaire 2016-2017
+\end{center}
+
+\clearpage
+
+\section*{REMERCIEMENTS}
+\addcontentsline{toc}{section}{REMERCIEMENTS}
+
+{
+\noindent Je tiens à remercier les personnes qui m'ont permis de mener à bien mon stage:
+
+\begin{itemize}
+ \item Mr SEIFOUDINI Mohamed, le responsable de l'association ARME.
+ \item Mr SIMBA Khaled, mon tuteur de stage.
+ \item Le personnel enseignant de l'université d'Evry Val d'Essonne.
+ \item La famille ANDRIANIAINA pour le soutien et l'aide précieuse qu'ils m'ont apporté.
+ %\item Mr NGUYEN Kim Thang, mon tuteur pédagogique, pour le suivi qu'il a apporté à mon stage, pour ses conseils ainsi que pour la relecture de mon rapport.
+ \item Mme ROUSSEAU Patricia, pour toutes les démarches administravites.
+ \item Toutes les personnes avec qui j'ai eu le plaisir de travailler, durant 8 semaines de stage, ainsi l'association Arme pour avoir contribuer à rendre ce passage en entreprise agréable.
+
+\end{itemize}
+
+}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Table des matières %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule\medskip
+
+\tableofcontents
+
+\medskip\hrule\bigskip\bigskip
+\clearpage
+
+
+\section*{FICHE BILAN ET SYNTHESE}
+\addcontentsline{toc}{section}{FICHE BILAN ET SYNTHESE}
+{
+\underline{L'entreprise d'acceuil}\\
+\textbf{Coordonées}: \\ARME - Association des Ressortissants De Mitsoudjé à l'Extérieur, 4 rue René Char, 93000 Bobigny \\
+\textbf{Tel}: 0665400904 \\
+\textbf{Email}: arme.mitsoudje@gmail.com \\
+\textbf{Secteur d'activités}: Aide aux ressortissants Mitsoudjéens (orientations, financier, conseils) \\
+\textbf{Département de l'entreprise}: Direction \\
+\textbf{Mission}: Conception,Developpement et mise en place d'un site intranet \\
+\textbf{Business model}: Association à but non lucratif \\
+\textbf{Numéro siret}: 4486319030001\\
+\textbf{Numéro APE}: 9499Z
+
+\underline{Le responsable du stage dans l'entreprise}\\
+\textbf{Nom}: SIMBA Khaled\\
+\textbf{Tel}: 0630312586\\
+\textbf{Email}: khaledsimba@gmail.com\\
+\textbf{Fonction}: responsable communication\\
+\textbf{Ancienneté}: 10 ans
+
+\underline{L'environnement technique}\\
+\textbf{Méthode}: Maquettage\\
+\textbf{Langages informatiques utilisés}: PHP, MySQL, HTML, CSS, Bootstrap, Jquery\\
+\textbf{Logiciels utilisés}: Debian Linux, Apache2, phpmyadmin, Atom
+
+\underline{Mise en oeuvre des enseignements reçus pendant la licence MIAGE}\\
+\textbf{Langages informatiques}: Modélisation UML, Mysql, Javascript, CSS\\
+\textbf{Logiciels utilisés}: Gantter, Modelio
+
+\clearpage
+%%%%%%%%%%%%%
+% Section 1 %
+%%%%%%%%%%%%%
+
+
+
+\section*{INTRODUCTION}
+\addcontentsline{toc}{section}{INTRODUCTION}
+
+Dans le cadre de ma formation en licence 3 informatique parcours MIAGE à l'université Evry Val d'Essonne,
+j'ai eu l'opportunité de faire un stage de 2 mois en entreprise pour valider mon diplôme.
+Ce stage avait pour objectif de créer une application web, qui à la fois, servira de site web de l'association et aussi intègrera un certain nombre d'outils.
+Les détails sur ces fonctionnalités seront présentés dans les objectifs du stage \ref{sub:2.2} .
+
+Afin de présenter clairement mon stage, ce rapport sera divisé en 3 parties: 
+\begin{itemize}
+ \item La première partie contiendra la présentation de l'association ``ARME''.
+ \item La deuxième partie présentera le déroulement de mon travail de stage. Dans cette partie, je présenterai les motivations 
+       et les besoins qui ont poussé le responsable de communication de l'association ARME à proposer ce stage. J'y présente aussi 
+       les divers étapes de mon travail de stage allant de la phase de compréhension du besoin à la production de la version 
+       finale du livrable.
+ \item La troisième partie aura pour objet la présentation des résultats du stage, ainsi que les divers opportunités que j'ai pu avoir suite à mon stage.
+\end{itemize}
+\clearpage
+\section{Présentation de l'entreprise d'accueil: l'association ARME}
+\label{sec:section1}
+
+L'association a été fondé par les ressortissants du Mitsoudjé vivant à l'étranger, et adhérent à cette même asociation.
+Elle est régie par la loi du 1er juillet 1901 et le décret du 16 août 1901 ayant pour titre ``ARME'' Association des 
+Ressortissants de Mitsoudjé à l'Extérieur.
+
+\noindent Entre autres, l'association a pour mission principale de :
+ \begin{itemize}
+ \item \OE{}uvrer pour l'éducation, l'insertion professionnelle et sociale de ses membres et de leur famille.
+ \item Favoriser l'entraide entre ses membres. Ces services incluent des aides sur le plan humain, psychologique et moral, 
+  administratives, juridiques et dans la mesure du possible des aides financières.
+ \item Promouvoir et diffuser la culture comorienne dans un esprit d'échange
+  à travers des conférences, débats et expositions.
+ \item Soutenir et encourager les projets de développement communal, régional ou national en Union des Comores, en partenariat avec les associations locales.
+ \end{itemize}
+
+\clearpage
+
+% % %%%%%%%%%%%%%
+% % % Section 2 %
+% % %%%%%%%%%%%%%
+% % 
+\section{Presentation du sujet de stage}
+\label{sec:section2}
+
+La mission principale qui m'a été confiée, était de, développer une application web. Pour l'association, cette 
+application a un double objectif dans sa manière de fonctionner. La première de ces objectifs est de fournir un 
+site web permettant de mettre en ligne les informations sur l'association. Le deuxième objectif est de fournir une
+première base de dématérialisation sur sa manière de fonctionner.
+
+Auparavant l'association n'a jamais possédé de site internet et ce stage avait pour objectif, à la fois de fournir une
+première version de ce site, mais aussi une première approche de dématérialisation.
+En effet, dans le cadre de ces idées d'informatisation et de dématérialisation, l'association a émis des besoins particulières de:
+\begin{itemize}
+ \item Promouvoir les activités de l'association.
+ \item Dématerialiser la gestion des membres entrants et sortants en utilisant une base de donnée (voir \ref{sub:2.2}).
+ \item Avoir un outil visuel de suivi d'avancement des projets de l'association.
+\end{itemize}
+
+Il souhaite construire un site web avec des exigences très spécifiques. Ces exigences sont détaillés dans la partie \ref{sub:2.2}.
+
+Nécéssairement, pendant le déroulement de ce stage, j'étais confronté à l'utilisation de divers outils et méthodes qui me permettaient
+d'acquérir de nouvelles compétences, tout en respectant  ces exigences ainsi que celui de mon professeur responsable Mr NGUYEN qui consiste à dire : 
+``Il faut programmer au maximum et non pas seulement utiliser des modules toutes faîtes''.
+
+\subsection{Planification}
+\label{sub:2.1}
+Le stage se déroulait dans les locaux de l'association ARME. 
+Les détails sur le déroulement du stage sont données par le planning prévisionnel de la figure \ref{planning} .
+Il a été discuté avec Mr SIMBA lors des 3 premiers jours de stage.
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics[scale=0.26]{planningPrevisionnelle.PNG}
+      \caption[titre]{Planning prévisionnel}
+      \label{planning}
+    \end{center}
+  \end{figure}
+  
+%\clearpage
+Ce planning inclut 2 grandes phases:
+\begin{itemize}
+ \item Une phase d'étude du projet qui contient plusieurs parties tels que l'analyse des besoins,
+ la planification dans le temps des divers tâches du stage, la validation du livrable.
+ \item Une phase de réalisation. Cette phase inclue la mise en place de l'environnement de développement
+\end{itemize}
+
+%\clearpage
+
+\subsection{Spécification et analyse des exigences}
+\label{sub:2.2}
+
+Le client a exprimé ses besoins et ses souhaits concernant l'application web à implementer.
+Cette partie du rapport nous permettra d'exposer un extrait des études des besoin et analyses d'exigences que j'ai pu effectuer en début de stage.
+
+\subsubsection{Exigences fonctionnelles}
+\paragraph{Exigence 1 : L'inscription de nouveaux membres\\}
+L'application doit permettre à un membre de s'inscrire (ou s'enroller) dans l'association.
+L'application doit donc donner la possibilité au visiteur d'entrer un certain nombre d'informations pour demander une inscription.
+
+\paragraph{Exigence 2 : Connexion d'un membre de l'association\\}
+Le site doit fournir 3 niveaux de confidentialité:
+\begin{itemize}
+ \item Un premier niveau qui permettra à un visiteur non membre de l'association d'accéder au site. Ce niveau est la plus contraintes 
+ et qui fournit le minimum d'information aux personnes non membres.
+ \item Un niveau de confidentialité correspondant à un membre inscrit. Ce niveau donne un accès limité aux menus et aux documents 
+ disponibles sur les projets de l'association, ainsi qu'à la capacité d'ajouter des commentaires sur le site.
+ \item Un niveau de confidentialité correpondant au niveau administrateur du site. Cette méthode fournit tous les accès aux informations comme
+ la modification ou la suppression d'un membre.
+\end{itemize}
+
+\paragraph{Exigence 3 : Section actualités et informations\\}
+Le site web doit avoir une section dédié aux actualités et aux informations de la vie de l'association.
+Cette section est accessible par les 3 niveaux de confidentialité.
+
+\paragraph{Exigence 4 : Accéder à la liste des projets\\}
+L'outil de visualisation de projet, dans sa première version, doit avoir comme fonctionalités de base les suivantes: 
+\begin{itemize}
+ \item Afficher l'état d'avancement de chaque tâche du projet.
+ \item Afficher les statistiques sur les projets à l'aide d'un diagramme circulaire(taux de réussite, projet en cours, projet fini, projet par partenaire).
+ \item Pouvoir télecharger les documents associés.
+\end{itemize}
+Cet outil consiste en une section de l'application web, accessible via un menu principal et seulement visible par les membres connectés. 
+J'ai effectué une maquette afin de présenter le visuel de l'idée lors de cette phase d'analyse \ref{Maqu}.
+
+\paragraph{Exigence 5 : Accéder à la liste des membres\\}
+Les membres de l'association doivent être présentés dans une section dédiée du site sous forme de trombinoscope.
+Ce trombinoscope doit être affichés comme une gallerie d'image et chaque image doit être responsive comme le site.
+Au passage de la souris sur chaque photos les informations du membre sont affichés en filigrane transparent.
+
+\paragraph{Exigence 6 : Accéder à la liste des partenariats\\}
+ Les utilisateurs doivent avoir la possibilité d'accéder à la liste des partenaires de l'association. Cette liste de partenaire doit être 
+ affiché comme des images statiques avec leur logo ou leur nom.
+
+ 
+\subsubsection{Exigences non fonctionnelles}
+
+\paragraph{Exigence 7: Le site doit être responsive\\}
+  Il est primordiale de rendre le site responsive, c'est à dire qu'il doit s'adapter aux divers médias utilisés pour le consulter (téléphone 
+  portable, pc ou  écran de télévision).  
+  En effet, la fonction de ``conception responsive'' permet au site d'être flexible et de s'adapter automatiquement à tous les tailles d'écran.
+  Cette fonctionnalités est importante pour tenir compte de l'évolution des technologies (smartphone, tablettes, wearables, ...).
+  
+\paragraph{Exigence 8: Utilisation du modèle MVC\\}
+\label{exigence_mvc}
+  Au départ, il a été convenu de réaliser le site web à partir de rien, sans utiliser ni CMS ni une quelconque base de code comme point départ.
+  Le site doit être développé en php sans aucune architecture particulière à part l'organisation des fichiers qui le composent.
+  
+  Au fil du temps, une nouvelle exigence est apparue, et la première version du livrable a dû être remaniée et retravaillée en profondeur. 
+  Cette nouvelle exigence était de developper le site en suivant le design pattern MVC \ref{sub:4.3}.
+
+%\clearpage
+
+\subsection{Maquettage}
+\label{sub:2.3}
+Une maquette de site web peut être définie comme l'aspect visuel ou la vision du site avant de l'avoir fini. Elle permet effectivement de 
+mettre sur papier les différentes vues et fonctionnalités du site avant même de le developper. La maquette présente un état du site purement 
+graphique et statique sans aucune fonctionalités, mais permet de montrer ``quelle tête le site peut avoir'' quand il sera fini.
+
+Elle permet de se faire une idée des divers composants et des fonctionalités qui composeront le site finale Sa réalisation est une étape 
+déterminante dans la création d'un site internet parce qu'elle permet de savoir exactement quoi developper et quoi mettre dans chaque section 
+du site.
+Nous avons décidé d'inclure une étape de maquettage du site car cela permet d'avoir un visuel du site web avant même
+de dépenser du temps à developper des fonctionalités.
+
+Le logiciel Pencil \cite{pencil} sous Debian a été employé pour faire la maquette fonctionnelle.
+
+\vskip 2cm
+\begin{figure}[ht]
+  \begin{minipage}[c]{.46\linewidth}
+     \begin{center}
+             \includegraphics[width=7cm]{./maquette/acceuilarme.png}
+         \end{center}
+   \end{minipage} \hfill
+   \begin{minipage}[c]{.46\linewidth}
+	\begin{center}
+            \includegraphics[width=7cm]{./maquette/accederlisteprojet.png}
+        \end{center}
+   \end{minipage}
+   \vskip 2cm
+   \begin{center}
+    \begin{minipage}[c]{.46\linewidth}
+	  \begin{center}
+	      \includegraphics[width=7cm]{./maquette/partenartiat.png}
+	  \end{center}
+    \end{minipage}
+   \end{center}
+    \caption{Maquette pour le menu acceuil, menu projet et menu partenaire}
+  \label{Maqu}
+ \end{figure}
+ 
+\clearpage 
+ 
+\section{Déroulement des travaux de stage}
+\label{sec:section4}
+
+\subsection{Apprentissage des outils}
+\label{sub:4.1}
+
+Au début du stage, il m'a fallu acquérir certains nombres de compétences pour mener à bien 
+la mission.
+Voici un listing non exhaustif des compétences les plus importantes utilisés durant le stage, que j'ai dû soit acquérir, soit améliorer :
+\begin{itemize}
+ \item Acquisition de compétences sur la configuration d'un serveur web ( Apache, MySQL, PHP).
+ \item Revue, amélioration et apprentissage de divers languages de développement web (HTML5, CSS3, Javascript, bootstrap , PHP, Mysql). %\cite{bootstrap}
+ \item Acquisition de compétences sur le design pattern MVC \cite{mvc} pour satisfaire les exigences décrites en \ref{exigence_mvc}
+\end{itemize}
+Cette phase de montée en compétences m'a pris à peu près 15\% du temps de stage et majoritairement fait en début de stage.
+
+\subsection{Préparation de l'environnement de développement}
+\label{sub:4.2}
+
+\subsubsection{Installation d'un serveur web, php, MySQL}%Apache2, php5, mysql-server, php5-mysql, phpmyadmin
+
+Avant l'éxécution du travail, il était important de préparer un environnement de travail adéquat. J'ai décidé d'utiliser le système Debian GNU Linux
+car c'est mon système fétiche depuis un certain nombre d'année, mais aussi un système très stable, facile et gratuit.
+
+Le développement du site a été effectué sur un serveur local. Il a donc fallu installer un serveur web et nous avons choisi Apache  \cite{apache}.
+
+Ensuite, l'installation des autres applications utiles comme php, mysql et l'implémentation du modèle MVC (Model View Controllers) comme Composer qui
+est gestionnaire de dépendance, et qui a été utilisé particulièrement pour installer l'outil Eloquent.
+
+Divers autres outils ont été installés comme les éditeurs de textes (Atom et Brackets) et les outils de debug de PHP et de javascript.
+
+\subsubsection{Configuration de apache}
+
+Dans cette étape, mon objectif  était à la fois d'apprendre les divers configurations du serveur Apache 
+en modifiant le fichier apache2.conf afin de mettre en oeuvre un serveur web, et aussi de fournir un environnement facile à reproduire.
+
+Pour faciliter l'accès au projet, j'ai crée un alias sur son dossier racine en ajoutant quelques lignes (Voir 
+\ref{Création d'un alias vers le répertoire racine du projet}) dans le fichier de configuration d'apache ``apache2.conf'', présent
+dans le répertoire /etc/apache2/ .
+
+Ensuite, pour mettre en place l'approche MVC, j'ai dû activer le module de réecriture ``mod\_rewrite'' \cite{rewrite} d'Apache.
+Le module ``mod\_rewrite'' est déjà pré-installé avec Apache. Pour son activation, j'ai crée un lien logique 
+entre ce module et les fichiers du module que comprend le serveur d'apache et qui sont placés dans le dossier /etc/apache2mods-available/ .\\
+Ensuite j'ai ajouter le code de configuration ( cf \ref{Activation du module de réecriture d'Apache} ) dans le fichier de configuration du serveur Apache 
+avant son redémarage.
+
+Ensuite, j'ai dû apprendre les détails sur la manipulation des fichiers .htaccess notamment pour pouvoir interdire l'accès de certains 
+dossiers de l'application aux utilisateurs.
+
+Et enfin, j'ai dû installer un gestionnaire de dépendance, l'outil Composer de PHP à la racine du projet.
+Elle permet de gérer les dépendances de l'application.
+
+\subsection{Le modèle MVC}
+\label{sub:4.3}
+
+Le site est créé en utilisant le modèle MVC pour satisfaire les exigences décrites en \ref{exigence_mvc} .\\
+Le modèle MVC (modèle, vue et contrôleur) est un modèle d'architecture logicielle, composé de 3 modules séparés avec des fonctions différentes:
+\begin{itemize}
+ \item Le modèle : Contient les méthodes permettant d'intéragir avec la base de donnée.
+ \item La vue : Représente l'interface utilisateur, elle se contente d'afficher les données que lui fournit le modèle.
+ \item Le contrôleur : gère l'interaction entre le modèle et la vue.
+\end{itemize}
+
+
+L'utilisation du modèle MVC confère de nombreux avantages,
+l'un des avantages apporté est la clarté de l'architecture qu'il impose, cela simplifie la tâche du développeur pour la maintenance du projet.\\
+L'autre avantage réside dans la redéfinition du module de réecriture d'URL ( cf. \ref{Réecriture d'URL} ) ,
+elle permet d'améliorer le réferencement pour les moteurs de recherche, 
+protège l'application et offre une meilleure esthétique.% grâce à la redéfinition du module de réecriture d'URL.%grâce au mod Rewrite d'apache 
+%\begin{itemize}
+ %\item Avoir une dépendance minimale entre les différentes couches de l'application ; 
+%ainsi les modifications effectuées sur n'importe quelle couche de l'application n'affectent pas les autres couches.
+ %\item Limiter l'accès a certains dossier en utilisant le fichier htaccess
+       
+%\end{itemize}
+%J'ai séparé l'application de la manière suivante:
+%  \begin{figure}[ht]
+%    \begin{center}
+%      \includegraphics[scale=0.50]{structure_appli.png} 
+%      \caption{structure de l'application}
+%    \end{center}
+%    \label{structure de l'application}
+%  \end{figure}
+
+%Après avoir défini la structure de l'application, j'ai interdit l'accès du répertoire ``app'' au public en paramétrant le fichier ``.htaccess''.
+%C'est dans ce répertoire que contient le coeur de l'application et les 3 modules (models, views, controllers).
+
+%Ensuite, pour répertoire public, dans le fichier ``.htaccess'' , j'ai redéfini une règle d'écriture.
+%La redéfition de cette règle est un moyen offert par le serveur Apache pour transformer les liens url et les rendre plus
+%lisibles, et augmenter la sécurité liée à l'apparition du nom des paramètres dans l'URL.
+
+\subsection{Développement du site}
+%\label{sub:4.4}
+  
+
+
+Le développement du site est décomposé en deux parties:
+\begin{itemize}
+ \item La partie front-end, elle est composé de tous les élements visible(HTML, framework Bootstrap, CSS, Javascript, Jquery) de l'application web et 
+    avec lesquels on peut interagir via des formulaires et des interfaces graphiques.
+ \item La partie back-end (modèle et contrôleur) : c'est la partie invisible de l'application web qui fait le traitement des données du site comme la 
+ création des bases de données, l'enregistrement des utilisateurs, la liaison entre les éléments du MVC.
+\end{itemize}
+
+\subsubsection{La vue}
+%\label{sub:4.5}
+Pour des contraintes de temps, nous avons décidé d'utiliser un template html, css, Javascript pour la partie vue, 
+(comme ce que l'on voit ici \cite{gabarit})
+Il utilise le framework CSS Bootstrap, cet outil contient de nombreux composants prêt à l'emploi (liste déroulants, menus,bouttons,...).\\
+Il a fallu personnaliser le gabarit pour l'adapter à notre maquette et à nos besoins.
+Le code source (HTML5, CSS) est ensuite modifié.\\
+Le choix d'utiliser bootstrap facilite tout le travail de conception graphique, 
+de codage des positions des modules et même la fonctionnalité ``responsive'' du site.
+Dès lors, on capitalise plus de temps pour affiner les détails de la personnalisation et
+de la mise en place des fonctionnalités spécifiques attendues pour le site.
+
+Cette partie présente les fonctionnalités du site web développé au cours du stage
+%Dans cette partie, je présente les fonctionalités du site web que j'ai développé.\
+tout en respectant les exigences décrites dans la partie \ref{sub:2.2}:% plusieurs détails peuvent être données dans cette
+%partie, mais seuls les plus importantes sont exposées ici.
+%Voici un listing des fonctionnalités qui ont été codées directement:
+
+\subsubsection{Connexion et inscription d'un utilisateur: bootstrap Modal et Forms}
+ Pour interagir avec l'utilisateur, j'ai utilisé une fenêtre dynamique Modal \cite{modal} en Boostrap avec un formulaire dedans, il s'affiche dès qu'on clique sur le boutton se connecter ou s'inscrire.
+L'utilisateur doit remplir les champs du formulaire pour valider son inscription ou son identification.
+
+\paragraph{Affichage du diagramme circulaire: CanvasJs Pie Chart\\}
+ Les statistiques liés au projet sont représentés par un diagramme circulaire.
+La bibliothèque Canvas \cite{charts} en javascript permet d'afficher ce graphique, l'utilisation de jQuery permet de le rendre plus dynamique (???).
+
+\paragraph{Affichage de l'état d'avancement de tâche: Bootstrap Progress Bar\\}
+L'avancement de chaque tâche associé à un projet est représenté par un pourcentage.
+Pour l'afficher, j'ai utilisé le module `` progressbar '' \cite{progressbars}.
+
+\paragraph{Création d'un trombinoscope pour afficher les membres et les partenaires  : Bootstrap Gird system\\}
+Le système de grille \cite{girdsystem} de Boostrap m'a permis de mettre en page cette section.
+Une grille est découpé en 12 cellules par ligne, on peut alors décider d'organiser du contenu en utilisant pour chaque element une ou plusieurs cellules.
+Ce système est aussi utilisé dans le responsive design en s'adaptant à la taille de l'écran.
+Il existe 4 classes pour le système de grille:
+\begin{itemize}
+ \item col-xs (pour les écrans de très petite taille)
+ \item col-sm (pour les écrans de petite taille)
+ \item col-md (pour les écrans de taille moyenne)
+ \item col-lg (pour les écrans de grande taille)
+\end{itemize}
+
+\subsubsection{Le modèle et le contrôleur}
+%\label{sub:4.5}
+Le modèle et le contrôleur permettent de gerer dynamiquement le contenu du site à partir de la base de donnée.
+Pour la première version de l'application, j'ai utilisé les tables suivantes :
+
+  \begin{figure}[ht]
+    \begin{center}
+      \includegraphics[scale=0.60]{table_bdd.png} 
+      \caption{Tables utilisés}
+    \end{center}
+    \label{Tables utilisés}
+  \end{figure}
+  
+\paragraph{Le modèle:\\}
+Les tables partenaire, utilisateur et projet ont été exploitées sous forme de classes, dans un langage de programmation orientée objet en PHP.
+
+Avec les tables utilisateur et projet, j'ai utilisé l'extension PHP Data Object (PDO) pour instancier la connexion à la base de donnée ,
+et pour communiquer avec les tables, j'ai utiliser les reqûettes sql.
+%cette extension permet de fournir une interface d'abstraction à l'accès de données.
+Dans chaque classe, j'ai implémenté les méthodes suivantes : ajouter, modifier, rechercher, supprimer.
+
+Ensuite avec la table partenaire, j'ai utilisé l'outil Object Relational Mapper (ORM) d'Eloquent qui est aussi utilisé dans le framework Laravel.
+
+Eloquent est une classe , elle permet de créer un modèle correspondant à n'importe quel table contenu dans la base de donnée.
+Cette classe contient toutes les méthodes nécéssaire pour travailler avec la base de données (ajouter, modifier, rechercher, supprimer).
+L'utilisation de cette classe est très simple et ne nécéssite aucune connaissance en langage SQL.
+%\paragraph{Le contrôleur:\\}
+%Une classe par table a également été implémenté dans le contrôlleur, dans chaque classe du controlleur contient des méthodes d'actions.
+%Ces méthodes appelent le modèle, ensuite les informations extraites par le modèle sont transmis à la vue.
+XXXXXXXXXXXXX
+\clearpage
+Voici un exemple de requête permettant d'afficher les membres:
+\begin{center}
+  \textbf{http://localhost/framework\_MVC/public/membres/display}
+\end{center}
+
+
+\begin{itemize}
+ \item Le chemin de base est http://localhost/framework\_MVC/public/ , il s'agit de la page principale du site.
+ \item ``membres'' est le contrôleur
+ \item ``display'' est la méthode dans le contrôleur ``membres'' , cette méthode fait appel au modèle membre pour extraire les informations
+ de chaque membre présent dans la base de donnéee, ensuite ces informations seront transmis à la vue.
+\end{itemize}
+
+%Pour appeler la méthode voulue, il faut spécifier le nom du contrôleur suivi du
+%nom de la méthode à partir du chemin de base.\\
+%Voici un exemple de requête:\\
+%http://localhost/framework\_MVC/public/membres/display\\
+%Dans cette requête, le contrôleur visé est le contrôleur correspondant à ``membre'',
+%l'application va donc chercher dans le contrôleur membres, la méthode ``display''
+%qui permet d'afficher chaque membre avec leurs informations.\\
+%Le chemin de base est http://localhost/framework\_MVC/public/
+
+%Je vous présente ici quelques fonctionnalités en PHP auxquelles j'ai eu recours:
+%\begin{itemize}
+% \item L'extension PHP Data Object (PDO): pour l'accès à la base de donnée depuis PHP, elle fournit une interface d'abstraction à l'accès de données.
+% \item Les sessions : pour la gestion des membres.Les sessions sont un moyen simple de stocker des données individuelles pour chaque utilisateur en utilisant un identifiant de session unique.
+% \item Quelques fonctions sur les système de fichiers présent dans la bibliothèque php standard %chown, chmod, move_uploaded_file, unlink
+ %\begin{itemize}
+  %\item chown : change le propriétaire du fichiers
+  %\item chmod : change le mode d'un fichier
+  %\item move_uploaded_file : Déplace un fichier téléchargé
+  %\item unlink: Efface un fichier
+ %\end{itemize}
+
+ %\end{itemize}
+
+
+
+
+
+
+%\subsection{La partie contrôleur du site}
+
+%Le contrôleur gère la dynamique de l'application,elle fait le lien entre l'utilisateur et le reste de l'application.
+%La requête demandé par l'utilisateur est reçue par le contrôleur, ce dernier fait appel au modèle pour preparer les données à afficher.
+%Ensuite le contrôleur envoye ces données à la vue qui le présente à l'utilisateur sous la forme d'une page html.
+\clearpage
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Conclusion et perspectives %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \section*{CONCLUSION}
+%\label{sec:section7}
+\addcontentsline{toc}{section}{CONCLUSION}
+\noindent Ce stage m'a appris de nombreuses choses sur la réalité de la vie en entreprise comme la rigueur, les contraintes de temps et aussi la pression.
+Il m'a également permis d'approfondir des technologies que je pensais connaitre auparavant comme le HTML5, CSS, Bootstrap, PHP et MySQL.
+Ces 8 semaines passés au sein de ``ARME'', a augmenté mes capacités de compréhension, d'analyse et 
+m'ont apporté de nouvelles connaissance et divers points positifs comme:
+\begin{itemize}
+ \item Le relationnel : j'ai trouvé des amis, des collègues de travail et j'ai pu découvrir les différents aspect du travail en équipe.
+ \item La confiance : ce stage m'a permis de connaître mes faiblesses et mes qualités en terme de programmation et de rédaction.
+ \item Les perspectives d'avenir: ce stage me donne envie de travailler dans le domaine de développement Web et des systèmes d'informations.
+\end{itemize}
+Mais il y a des domaines importantes que je n'ai pas eu l'occasion de découvrir, en particulier:
+\begin{itemize}
+ \item La sécurité d'un site : Il est important de sécuriser un site web pour éviter qu'une personne malveillante ne modifie le site.
+ Cet aspect du développement web est important car de nos jours, les attaques se diversifient de plus en plus.
+ Des exemples peuvent être cités : le défaçage web, l'injection \cite{injectionsql} de code (type SQL, ASP, PHP, Javascript, ...).
+ \item L'optimisation des moteurs de recherche : Selon Wikipedia, L'optimisation pour les moteurs de recherche (en anglais : Search engine optimisation) est
+ un ensemble de techniques visant à favoriser la compréhension de la thématique et du contenu d'une ou de l'ensemble des pages d'un site Web par les moteurs
+ de recherche. J'aimerai bien approfondir mes connaissances en etudiant un peu plus cette partie là.
+\end{itemize}
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%
+% Bibliographie %
+%%%%%%%%%%%%%%%%%
+\bibliography{template_stage_L3.bib}
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Annexes -> changement des numéros de pages en lettres %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\begin{center}
+\textbf{\begin{huge}ANNEXE      \end{huge}}
+\end{center}\setcounter{page}{1}
+\renewcommand{\thepage}{\roman{page}}
+
+%%%%%%%%%%%
+% Annexes %
+%%%%%%%%%%%
+
+\section{Abbreviations}
+\label{ann:Abbreviations}
+\begin{tabbing}
+ hspace{2cm}\=\hspace{2cm}\=\kill
+ PHP \> PHP: Hypertext Preprocessor\\
+ HTML \> Hypertext Markup Language\\
+ CSS \> Cascading Style Sheets\\
+ SQL \> Structured Query Language\\
+ HTTP \> HyperText Transfert Protocol\\
+ MVC \> Modèle Vue Contrôleur\\
+ URL \> Uniform Resource Locator\\
+\end{tabbing}
+
+\clearpage
+
+
+\section{Quelques capture d'écran de l'application}
+\label{ann:Titre annexe B}
+
+\subsection{Formulaire d'enregistrement d'un utilisateur}
+\label{Formulaire d'enregistrement d'un utilisateur}
+
+\begin{figure}[htbp!]
+	\centerline{\includegraphics[scale=0.80]{./s_enregistrer.png}}
+	\caption{Formulaire d'enregistrement  d'un utilisateur}
+\end{figure}
+
+\clearpage
+
+\subsection{Menu acceuil vu par un utilisateur non connecté}
+\label{Page d'acceuil vu par un utilisateur non connecté}
+\begin{figure}[htbp!]
+	\centerline{\includegraphics[scale=0.90]{./home_invite.png}}
+	\caption{Menu acceuil vu par un utilisateur non connecté}
+\end{figure}
+
+\clearpage
+
+\subsection{Menu acceuil vu par un utilisateur connecté}
+\label{Page d'acceuil vu par un utilisateur connecté}
+\begin{figure}[htbp!]
+	\centerline{\includegraphics[scale=0.90]{./home_conected.png}}
+	\caption{Menu acceuil vu par un utilisateur connecté}
+\end{figure}
+
+\clearpage
+\subsection{Menu projet vu par un membre connecté}
+\label{Menu projet vu par un membre connecté}
+\begin{figure}[htbp!]
+	\centerline{\includegraphics[scale=0.55]{./menu_projet.png}} %50
+	\caption{Menu projet vu par un membre connecté}
+\end{figure}
+
+\clearpage
+\subsection{Menu membre vu par un administrateur}
+\label{Menu membre vu par un administrateur}
+\begin{figure}[htbp!]
+	\centerline{\includegraphics[scale=0.55]{./membre_for_admin.png}}
+	\caption{Menu membre vu par un administrateur}
+\end{figure}
+
+\clearpage
+
+\subsection{Menu membre vu par un membre connecté}
+\label{Menu membre vu par un membre connecté}
+\begin{figure}[htbp!]
+	\centerline{\includegraphics[scale=0.55]{./menu_membre_display.png}}
+	\caption{Menu membre vu par un membre connecté}
+\end{figure}
+
+\clearpage
+
+\section{Extrait de code}
+\label{ann:Titre Annexe C}
+
+\subsection{Création d'un alias vers le répertoire racine du projet}
+\label{Création d'un alias vers le répertoire racine du projet}
+Le code ci dessous a été ajouté dans le fichier apache2.conf  présent dans le répertoire /etc/apache2/ \\
+Son ajout permet de créer un alias vers la racine du projet. 
+\begin{verbatim}
+Alias /mvc "/home/rado/siteweb/framework_MVC"
+<Directory /home/rado/siteweb/framework_MVC>
+allow from all
+Options Indexes FollowSymLinks
+AllowOverride All
+Require all granted
+</Directory>
+\end{verbatim}
+
+\subsection{Activation du module de réecriture d'Apache}
+\label{Activation du module de réecriture d'Apache}
+Le code ci dessous a été ajouté dans le fichier apache2.conf  présent dans le répertoire /etc/apache2/ \\
+Son ajout permet d'activer le ``mod\_rewrite'' sur apache. 
+%\lstset{language=}
+
+\begin{verbatim}
+<ifModule mod_rewrite.c>
+RewriteEngine On
+</ifModule>
+\end{verbatim}
+ 
+\subsection{Réecriture d'URL}
+\label{Réecriture d'URL}
+\begin{verbatim}
+Options -MultiViews
+RewriteEngine On
+RewriteBase /framework_MVC/public
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+\end{verbatim}
+ 
+\end{document}
+\grid
+\grid
+\lstset{language=}
